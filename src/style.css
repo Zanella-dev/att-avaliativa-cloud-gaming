@@ -1,19 +1,16 @@
-/* =======================================================
-   1. CONFIGURAÇÕES GERAIS E PALETA DE CORES "GAMER"
-   ======================================================= */
 :root {
-  --bg-dark: #0a0a0f;         /* Fundo principal - Quase preto */
-  --bg-card: #15151e;         /* Fundo de seções/cards - Cinza bem escuro */
-  --text-light: #ffffff;      /* Textos de títulos - Branco */
-  --text-muted: #a0a0b5;      /* Textos longos - Cinza claro azulado */
+  --bg-dark: #0a0a0f;       
+  --bg-card: #15151e;        
+  --text-light: #ffffff;    
+  --text-muted: #a0a0b5;      
   
-  --neon-green: #00ff66;      /* Verde Gamer Neon (Ação Principal) */
+  --neon-green: #00ff66;     
   --neon-green-hover: #00cc52;
   
-  --neon-purple: #b100ff;     /* Roxo Neon (Destaque Premium) */
+  --neon-purple: #b100ff;     
   --neon-purple-hover: #8a00cc;
   
-  --border-dark: #2a2a35;     /* Cor das bordas */
+  --border-dark: #2a2a35;     
 }
 
 * {
@@ -30,12 +27,10 @@ body {
   color: var(--text-light);
 }
 
-/* Utilitários de Cor */
 .text-green { color: var(--neon-green); }
 .text-purple { color: var(--neon-purple); }
 .bg-purple { background-color: var(--neon-purple); }
 
-/* Botões Padrão */
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -57,9 +52,6 @@ body {
 .btn-outline { background-color: transparent; border: 1px solid var(--neon-green); color: var(--neon-green); }
 .btn-outline:hover { background-color: rgba(0, 255, 102, 0.1); }
 
-/* =======================================================
-   2. CABEÇALHO (HEADER) E MENU
-   ======================================================= */
 .header {
   display: flex;
   justify-content: space-between;
@@ -92,9 +84,6 @@ body {
 }
 .btn-login:hover { color: var(--neon-green); }
 
-/* =======================================================
-   3. SEÇÃO HERO (INÍCIO)
-   ======================================================= */
 .hero-section {
   text-align: center;
   padding: 120px 20px;
@@ -126,9 +115,6 @@ body {
 
 .hero-buttons { display: flex; justify-content: center; gap: 15px; }
 
-/* =======================================================
-   4. SEÇÃO DE PREÇOS (CARDS)
-   ======================================================= */
 .pricing-section {
   padding: 80px 20px;
   text-align: center;
@@ -166,7 +152,6 @@ body {
 
 .card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
 
-/* Destaque do Card Premium (RGB) */
 .card-premium {
   border: 2px solid var(--neon-purple);
   box-shadow: 0 0 20px rgba(177, 0, 255, 0.2);
@@ -221,13 +206,10 @@ body {
   align-items: center;
   gap: 10px;
 }
-/* Estilizando o check das listas */
+
 .card ul li::before { content: '✔'; color: var(--neon-green); font-weight: bold; }
 .card-premium ul li::before { color: var(--neon-purple); }
 
-/* =======================================================
-   5. SEÇÃO DE CONTATO
-   ======================================================= */
 .contact-section {
   padding: 80px 20px;
   background-color: var(--bg-dark);
@@ -263,9 +245,6 @@ body {
 
 .form-message { margin-top: 15px; font-weight: bold; display: none; font-size: 14px; }
 
-/* =======================================================
-   6. FOOTER (RODAPÉ)
-   ======================================================= */
 .footer-section {
   background-color: var(--bg-card);
   padding: 60px 20px 20px;
@@ -299,9 +278,6 @@ body {
   font-size: 12px;
 }
 
-/* =======================================================
-   7. RESPONSIVIDADE (MOBILE)
-   ======================================================= */
 @media (max-width: 768px) {
   .header { padding: 20px; flex-direction: column; gap: 20px; }
   .nav-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
