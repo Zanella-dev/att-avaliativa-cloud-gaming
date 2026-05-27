@@ -1,0 +1,319 @@
+/* =======================================================
+   1. CONFIGURAÇÕES GERAIS E PALETA DE CORES "GAMER"
+   ======================================================= */
+:root {
+  --bg-dark: #0a0a0f;         /* Fundo principal - Quase preto */
+  --bg-card: #15151e;         /* Fundo de seções/cards - Cinza bem escuro */
+  --text-light: #ffffff;      /* Textos de títulos - Branco */
+  --text-muted: #a0a0b5;      /* Textos longos - Cinza claro azulado */
+  
+  --neon-green: #00ff66;      /* Verde Gamer Neon (Ação Principal) */
+  --neon-green-hover: #00cc52;
+  
+  --neon-purple: #b100ff;     /* Roxo Neon (Destaque Premium) */
+  --neon-purple-hover: #8a00cc;
+  
+  --border-dark: #2a2a35;     /* Cor das bordas */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* Utilitários de Cor */
+.text-green { color: var(--neon-green); }
+.text-purple { color: var(--neon-purple); }
+.bg-purple { background-color: var(--neon-purple); }
+
+/* Botões Padrão */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-green { background-color: var(--neon-green); color: #000000; }
+.btn-green:hover { background-color: var(--neon-green-hover); box-shadow: 0 0 15px rgba(0, 255, 102, 0.4); }
+
+.btn-outline { background-color: transparent; border: 1px solid var(--neon-green); color: var(--neon-green); }
+.btn-outline:hover { background-color: rgba(0, 255, 102, 0.1); }
+
+/* =======================================================
+   2. CABEÇALHO (HEADER) E MENU
+   ======================================================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.logo { font-size: 24px; font-weight: 900; letter-spacing: 1px; }
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-muted);
+  margin: 0 15px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+.nav-menu a:hover { color: var(--text-light); text-shadow: 0 0 8px rgba(255,255,255,0.5); }
+
+.btn-login {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.btn-login:hover { color: var(--neon-green); }
+
+/* =======================================================
+   3. SEÇÃO HERO (INÍCIO)
+   ======================================================= */
+.hero-section {
+  text-align: center;
+  padding: 120px 20px;
+  background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-dark) 100%);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.tag-olha {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.2;
+}
+
+.hero-section p {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.hero-buttons { display: flex; justify-content: center; gap: 15px; }
+
+/* =======================================================
+   4. SEÇÃO DE PREÇOS (CARDS)
+   ======================================================= */
+.pricing-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: var(--bg-card);
+}
+
+.pricing-section h4 {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.pricing-section h2 { font-size: 36px; margin-bottom: 50px; }
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 300px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+
+/* Destaque do Card Premium (RGB) */
+.card-premium {
+  border: 2px solid var(--neon-purple);
+  box-shadow: 0 0 20px rgba(177, 0, 255, 0.2);
+  transform: translateY(-10px);
+}
+.card-premium:hover { transform: translateY(-15px); box-shadow: 0 0 30px rgba(177, 0, 255, 0.4); }
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 10px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.card h3 { font-size: 22px; margin-bottom: 10px; }
+.card p { color: var(--text-muted); font-size: 14px; margin-bottom: 25px; min-height: 40px; line-height: 1.5; }
+.card .price { font-size: 36px; font-weight: bold; margin-bottom: 25px; }
+.card .price span { font-size: 14px; font-weight: normal; color: #666; }
+
+.btn-outline-card, .btn-purple-card {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-outline-card { border: 1px solid var(--text-muted); color: var(--text-light); }
+.btn-outline-card:hover { border-color: var(--neon-green); color: var(--neon-green); background-color: rgba(0,255,102,0.05); }
+
+.btn-purple-card { background-color: var(--neon-purple); color: #ffffff; }
+.btn-purple-card:hover { background-color: var(--neon-purple-hover); box-shadow: 0 0 15px rgba(177, 0, 255, 0.4); }
+
+.card ul { list-style: none; margin-top: 30px; }
+.card ul li {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Estilizando o check das listas */
+.card ul li::before { content: '✔'; color: var(--neon-green); font-weight: bold; }
+.card-premium ul li::before { color: var(--neon-purple); }
+
+/* =======================================================
+   5. SEÇÃO DE CONTATO
+   ======================================================= */
+.contact-section {
+  padding: 80px 20px;
+  background-color: var(--bg-dark);
+  text-align: center;
+}
+
+.contact-container { max-width: 600px; margin: 0 auto; }
+.contact-container h4 { text-transform: uppercase; font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; }
+.contact-container h2 { font-size: 32px; margin-bottom: 15px; }
+.contact-container p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 40px; }
+
+.contact-form { display: flex; flex-direction: column; gap: 15px; }
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background-color: var(--bg-card);
+  color: var(--text-light);
+  transition: border 0.3s;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #666; }
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 0 2px rgba(0, 255, 102, 0.2);
+}
+
+.contact-form textarea { min-height: 120px; resize: vertical; }
+
+.form-message { margin-top: 15px; font-weight: bold; display: none; font-size: 14px; }
+
+/* =======================================================
+   6. FOOTER (RODAPÉ)
+   ======================================================= */
+.footer-section {
+  background-color: var(--bg-card);
+  padding: 60px 20px 20px;
+  border-top: 1px solid var(--border-dark);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-brand h3 { margin-bottom: 15px; font-size: 24px; font-weight: 900; letter-spacing: 1px;}
+.social-icons a { color: var(--text-muted); text-decoration: none; margin-right: 15px; font-size: 14px; text-transform: uppercase; font-weight: bold; transition: 0.3s; }
+.social-icons a:hover { color: var(--neon-green); text-shadow: 0 0 8px rgba(0,255,102,0.4); }
+
+.footer-links { display: flex; gap: 80px; flex-wrap: wrap; }
+.link-col h4 { font-size: 16px; margin-bottom: 20px; color: var(--text-light); }
+.link-col a { display: block; color: var(--text-muted); text-decoration: none; font-size: 14px; margin-bottom: 12px; transition: color 0.2s; }
+.link-col a:hover { color: var(--neon-green); }
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-dark);
+  color: #666;
+  font-size: 12px;
+}
+
+/* =======================================================
+   7. RESPONSIVIDADE (MOBILE)
+   ======================================================= */
+@media (max-width: 768px) {
+  .header { padding: 20px; flex-direction: column; gap: 20px; }
+  .nav-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .hero-section { padding: 80px 20px; }
+  .hero-section h1 { font-size: 32px; }
+  .hero-buttons { flex-direction: column; }
+  
+  .pricing-cards { flex-direction: column; align-items: center; }
+  .card { width: 100%; max-width: 350px; }
+  .card-premium { transform: translateY(0); }
+  .card-premium:hover { transform: translateY(-5px); }
+  
+  .footer-container { flex-direction: column; text-align: center; }
+  .footer-links { gap: 40px; flex-direction: column; width: 100%; }
+}
