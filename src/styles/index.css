@@ -280,7 +280,7 @@ body {
 
 @media (max-width: 768px) {
   .header { padding: 20px; flex-direction: column; gap: 20px; }
-  .nav-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+  
   .hero-section { padding: 80px 20px; }
   .hero-section h1 { font-size: 32px; }
   .hero-buttons { flex-direction: column; }
@@ -292,4 +292,33 @@ body {
   
   .footer-container { flex-direction: column; text-align: center; }
   .footer-links { gap: 40px; flex-direction: column; width: 100%; }
+}
+
+
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 768px) {
+  .mobile-menu-btn { 
+    display: block; 
+  }
+  .nav-menu { 
+    display: none; 
+    flex-direction: column; 
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .nav-menu.mobile-active { 
+    display: flex; 
+  }
 }
